@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu Snake</title>
+    <link rel="stylesheet" href="{% static 'css/projet04/style.css' %}">
+    <style>
+
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <div id="gameOverModal">
+        <p>Vous avez perdu !</p>
+        <button id="restartButton">Rejouer</button>
+    </div>
+    <div class="controls">
+        <div class="directional-buttons">
+            <button class="button" id="upButton">↑</button>
+            <div class="horizontal-buttons">
+                <button class="button" id="leftButton">←</button>
+                <button class="button" id="rightButton">→</button>
+            </div>
+            <button class="button" id="downButton">↓</button>
+        </div>
+    </div>
+    <script src="{% static 'js/projet04/script.js' %}"></script>
+</body>
+</html>
+

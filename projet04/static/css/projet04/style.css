@@ -1,0 +1,105 @@
+  body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Style pour le canvas du jeu */
+        #gameCanvas {
+            border: 2px solid #333;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 100%;  /* Permet au canvas de s'adapter à la largeur de l'écran */
+            max-height: 80vh;  /* Limite la hauteur à 80% de la hauteur de la vue pour laisser de l'espace pour d'autres éléments */
+        }
+
+        /* Style pour la boîte de dialogue de fin de partie */
+        #gameOverModal {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 2px solid #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: fadeIn 0.5s;
+            z-index: 10;  /* Assurez-vous que la boîte de dialogue est au-dessus du canvas */
+        }
+
+        /* Animation pour la boîte de dialogue */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Style pour le bouton de relance */
+        #restartButton {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Effet de survol pour le bouton de relance */
+        #restartButton:hover {
+            background-color: #45a049;
+        }
+
+        /* Styles pour les parties du serpent et la nourriture */
+        .snake-part {
+            background-color: green;
+            border: 1px solid darkgreen;
+        }
+
+        .food {
+            background-color: red;
+            border: 1px solid darkred;
+        }
+
+        /* Styles pour les boutons de contrôle */
+        .controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+
+        .button:active {
+            background-color: #555;
+        }
+
+        .directional-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        .horizontal-buttons {
+            display: flex;
+            justify-content: center;
+        }
+        .button {
+            font-size: 24px;
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #333;
+            color: white;
+        }
